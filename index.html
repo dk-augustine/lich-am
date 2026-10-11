@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Âm lịch</title>
+<meta name="description" content="Vietnamese lunar dates (UTC+7) for Google Calendar, 2026 to 2065.">
+<style>
+:root{--bg:#f7f5f0;--card:#fff;--ink:#1f1d1a;--muted:#6b665e;--line:#e4dfd6;--accent:#a3392b;--accent-ink:#fff;--code:#f1ede5}
+@media (prefers-color-scheme:dark){:root{--bg:#161513;--card:#201f1c;--ink:#ece8e1;--muted:#a39d93;--line:#34312c;--accent:#e0705f;--accent-ink:#161513;--code:#2a2824}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:640px;margin:0 auto;padding:32px 16px 48px}
+h1{font-size:2rem;margin:0 0 4px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin:0 0 16px}
+h2{font-size:1.05rem;margin:0 0 12px}
+.url{display:flex;gap:8px;align-items:stretch}
+.url code{flex:1;min-width:0;overflow-wrap:anywhere;background:var(--code);border-radius:8px;padding:10px 12px;font:14px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace}
+button,.btn{appearance:none;border:0;border-radius:8px;padding:10px 14px;font:inherit;font-weight:600;cursor:pointer;text-decoration:none;display:inline-block;text-align:center}
+.primary{background:var(--accent);color:var(--accent-ink)}
+.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+ol{margin:0;padding-left:20px}li{margin:4px 0}
+table{width:100%;border-collapse:collapse;font-size:15px}
+td{padding:7px 0;border-bottom:1px solid var(--line);vertical-align:top}
+td:first-child{white-space:nowrap;padding-right:16px;font-weight:600}
+tr:last-child td{border-bottom:0}
+.muted{color:var(--muted);font-size:14px}
+ul.files{margin:0;padding-left:20px}
+a{color:var(--accent)}
+</style>
+</head>
+<body>
+<main>
+  <h1>Âm lịch</h1>
+  <p class="sub">Vietnamese lunar dates for Google Calendar, calculated on Vietnam time (UTC+7). 1 Jan 2026 to 31 Dec 2065.</p>
+
+  <section class="card">
+    <h2>Subscribe link</h2>
+    <div class="url"><code id="u">https://dk-augustine.github.io/lich-am/lich-am.ics</code><button class="primary" id="copy" type="button">Copy</button></div>
+    <div class="row">
+      <a class="btn ghost" href="https://calendar.google.com/calendar/r?cid=webcal%3A%2F%2Fdk-augustine.github.io%2Flich-am%2Flich-am.ics" target="_blank" rel="noopener">Add to Google Calendar</a>
+      <a class="btn ghost" href="webcal://dk-augustine.github.io/lich-am/lich-am.ics">Add to Apple Calendar</a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Add it by hand (Google Calendar on a computer)</h2>
+    <ol>
+      <li>Open calendar.google.com.</li>
+      <li>On the left, next to <b>Other calendars</b>, click <b>+</b> then <b>From URL</b>.</li>
+      <li>Paste the link above and click <b>Add calendar</b>.</li>
+      <li>Google can take a few hours to show it the first time.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2>What the labels mean</h2>
+    <table>
+      <tr><td>15/8</td><td>Lunar day 15, month 8</td></tr>
+      <tr><td>1/9 ÂL</td><td>Mùng 1 of month 9</td></tr>
+      <tr><td>15/7 Rằm</td><td>Rằm (full moon day)</td></tr>
+      <tr><td>1/4N</td><td>Day 1 of the leap 4th month (N = nhuận)</td></tr>
+      <tr><td>1/1 Tết Đinh Mùi</td><td>Tết, with the year's name</td></tr>
+      <tr><td>29/12 Giao thừa</td><td>Last day of the lunar year</td></tr>
+    </table>
+    <p class="muted">Holidays: Tết (mùng 1 to 3), Rằm tháng Giêng, Tết Hàn Thực, Giỗ Tổ Hùng Vương, Lễ Phật Đản, Tết Đoan Ngọ, Vu Lan, Trung Thu, Ông Công Ông Táo, Giao thừa.</p>
+  </section>
+
+  <section class="card">
+    <h2>Backup: 10-year files</h2>
+    <p class="muted" style="margin-top:0">Use these only if Google will not load the full file. Copy each link and add it the same way (From URL).</p>
+    <ul class="files">
+      <li><code style="overflow-wrap:anywhere">https://dk-augustine.github.io/lich-am/lich-am-2026-2035.ics</code></li>
+      <li><code style="overflow-wrap:anywhere">https://dk-augustine.github.io/lich-am/lich-am-2036-2045.ics</code></li>
+      <li><code style="overflow-wrap:anywhere">https://dk-augustine.github.io/lich-am/lich-am-2046-2055.ics</code></li>
+      <li><code style="overflow-wrap:anywhere">https://dk-augustine.github.io/lich-am/lich-am-2056-2065.ics</code></li>
+    </ul>
+  </section>
+</main>
+<script>
+document.getElementById('copy').addEventListener('click', function () {
+  var b = this, t = document.getElementById('u').textContent;
+  function done(){ b.textContent = 'Copied'; setTimeout(function(){ b.textContent = 'Copy'; }, 1500); }
+  if (navigator.clipboard) navigator.clipboard.writeText(t).then(done, function(){});
+  else { var r = document.createRange(); r.selectNode(document.getElementById('u')); getSelection().removeAllRanges(); getSelection().addRange(r); }
+});
+</script>
+</body>
+</html>
